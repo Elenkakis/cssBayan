@@ -13,7 +13,7 @@ img {
     margin-left: auto;
     margin-right: auto;
     width: 200px;
-    height: 100%;
+    
 }
 .wrapper {
     width: 100%;
@@ -63,15 +63,14 @@ img {
 .step_title h2:hover{
     color: blue;
 }
-.step_input:checked ~ .step_picone {
-    display: block;
+.step_input:checked ~ .step_picone , .step_input:hover ~ .step_picone {
+    max-height: 800px;
 }
-.step_input:hover ~ .step_picone {
-    display: block;
-    
-}
+
 .step_picone {
-    display: none;
+    max-height: 0;
+    transition: max-height 0.7s linear;
+    overflow-y: hidden;
     
 }
 .step_input:checked ~ .step_title::after {
